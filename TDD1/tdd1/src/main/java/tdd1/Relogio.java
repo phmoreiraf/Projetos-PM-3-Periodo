@@ -16,7 +16,12 @@ public class Relogio {
     }
 
     public LocalTime definirHora(int horas, int minutos, int segundos) {
-      return tempoAtual;
+       if (horas < 0 || horas > 23 || minutos < 0 || minutos > 59 || segundos < 0 || segundos > 59) {
+            throw new IllegalArgumentException("Invalid time values");
+        }
+        this.tempoAtual = LocalTime.of(horas, minutos, segundos);
+        //System.out.println(this.tempoAtual + " Hora definida!");
+        return tempoAtual;
     }
 
 
