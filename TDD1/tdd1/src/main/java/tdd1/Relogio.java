@@ -16,7 +16,7 @@ public class Relogio {
     }
 
     public LocalTime definirHora(int horas, int minutos, int segundos) {
-      
+      return tempoAtual;
     }
 
 
